@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Riding gear & motorcycle spare parts in Nairobi | Nairobi Powerbikes</title>
+  <meta name="description" content="Helmets, jackets, gloves, boots and genuine spare parts. Order online and pay with M-Pesa, with delivery across Kenya.">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="catalog.js" defer></script>
+  <script src="site.js" defer></script>
+</head>
+<body data-page="shop">
+<main>
+  <section class="page-hero road">
+    <div class="wrap">
+      <div class="crumbs"><a href="index.html">Home</a> / Gear & parts</div>
+      <h1>Gear up. Fix up.</h1>
+      <p class="lead">Riding gear in the showroom and online, and genuine spares you can order without a single phone call.</p>
+      <div class="btn-row">
+        <a class="btn btn-red" href="#gear">Shop gear</a>
+        <a class="btn btn-ghost" href="#parts">Order a spare part</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="gear">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Riding gear</h2>
+        <p class="muted">Order online, collect in Langata or get it delivered.</p>
+      </div>
+      <div class="filters" role="group" aria-label="Gear categories" id="gear-filters"></div>
+      <div class="product-grid" id="product-grid"></div>
+      <p class="small muted" style="margin-top:14px">Prices shown are indicative. Payment is by M-Pesa once we confirm stock.</p>
+    </div>
+  </section>
+
+  <section class="section dark" id="parts">
+    <div class="wrap grid-2" style="align-items:start">
+      <div>
+        <p class="kicker">Genuine spares</p>
+        <h2>Order a part without calling</h2>
+        <p class="lead muted">Tell us your bike and the part. You'll get stock, price and delivery cost back on WhatsApp, pay with M-Pesa, and we ship it to your county.</p>
+        <ul class="stack" style="padding-left:1.1em;color:#d6d9dc">
+          <li>Parts for every Voge, Taro, Tekken and Zonsen we sell</li>
+          <li>Checked against your model before it's packed</li>
+          <li>Delivery anywhere in Kenya, or collect in Langata</li>
+        </ul>
+      </div>
+      <form class="form-card" id="parts-form" novalidate>
+        <div class="form-grid">
+          <div class="field full"><label for="p-bike">Your bike</label><select id="p-bike"></select></div>
+          <div class="field full"><label for="p-part">Which part?</label><input id="p-part" type="text" placeholder="e.g. ignition lock, brake pads, chain kit"></div>
+          <div class="field"><label for="p-county">Deliver to</label><input id="p-county" type="text" placeholder="Town or county"></div>
+          <div class="field"><label for="p-name">Your name</label><input id="p-name" type="text" autocomplete="name"></div>
+          <div class="field full"><label for="p-phone">Phone (WhatsApp)</label><input id="p-phone" type="tel" autocomplete="tel" placeholder="07XX XXX XXX"></div>
+          <div class="full">
+            <button class="btn btn-red" type="submit" style="width:100%">Request this part</button>
+            <div class="form-success" role="status" aria-live="polite"></div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+</body>
+</html>

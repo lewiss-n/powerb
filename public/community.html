@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Group rides, ride routes & rider stories | Nairobi Powerbikes</title>
+  <meta name="description" content="Join Nairobi Powerbikes group rides, explore curated motorcycle routes from Langata to Magadi, Naivasha and Nanyuki, and share your ride on #RideYourPride.">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="catalog.js" defer></script>
+  <script src="site.js" defer></script>
+</head>
+<body data-page="community">
+<main>
+  <section class="hero road" style="min-height:min(78vh,700px)">
+    <div class="hero-media"><img srcset="/img/65e56b39dcc9fb2ba5526264-480.webp 480w, /img/65e56b39dcc9fb2ba5526264-960.webp 960w, /img/65e56b39dcc9fb2ba5526264-1600.webp 1600w" sizes="100vw" fetchpriority="high" decoding="async" src="/img/65e56b39dcc9fb2ba5526264-960.webp" alt="Riders gathered with their motorcycles"></div>
+    <div class="wrap">
+      <div class="crumbs"><a href="index.html">Home</a> / Rides</div>
+      <h1 style="max-width:10ch">More than a dealership</h1>
+      <p class="lead">Group rides from the showroom, routes we've ridden ourselves, and a wall of riders who bought here. Bring any bike.</p>
+      <div class="btn-row">
+        <a class="btn btn-red" href="#events">Upcoming rides</a>
+        <a class="btn btn-ghost" href="#routes">Ride routes</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- EVENTS -->
+  <section class="section dark" id="events">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Upcoming rides & events</h2>
+        <a class="btn btn-ghost btn-sm" data-wa="Hi, please add me to the Nairobi Powerbikes rides WhatsApp channel." href="#">Get ride alerts on WhatsApp</a>
+      </div>
+      <div>
+        <div class="event">
+          <div class="date"><span class="d">29</span><span class="m">Nov · Sun</span></div>
+          <div>
+            <h3>New rider skills morning</h3>
+            <p>Slow-speed control, braking and cornering on a closed course, with our team coaching. Great before your first long ride.</p>
+            <div class="meta"><span class="chip">7:30am · Showroom</span><span class="chip">Beginners</span><span class="chip">Free for owners</span></div>
+          </div>
+          <button class="btn btn-red" type="button" data-rsvp="New rider skills morning">Save my spot</button>
+        </div>
+        <div class="event">
+          <div class="date"><span class="d">12</span><span class="m">Dec · Sat</span></div>
+          <div>
+            <h3>Jamhuri Day ride to Magadi</h3>
+            <p>Down the escarpment to the soda lake and back by afternoon. Lead and sweep riders, fuel stop at Kiserian.</p>
+            <div class="meta"><span class="chip">6:30am · Showroom</span><span class="chip">220 km round trip</span><span class="chip">All levels</span></div>
+          </div>
+          <button class="btn btn-red" type="button" data-rsvp="Jamhuri Day ride to Magadi">RSVP</button>
+        </div>
+        <div class="event">
+          <div class="date"><span class="d">31</span><span class="m">Dec · Thu</span></div>
+          <div>
+            <h3>Last sunset of 2026</h3>
+            <p>An easy evening ride up to the Ngong Hills ridge to watch the last sunset of the year, then back to the showroom for nyama choma.</p>
+            <div class="meta"><span class="chip">4:30pm · Showroom</span><span class="chip">50 km round trip</span><span class="chip">All levels</span></div>
+          </div>
+          <button class="btn btn-red" type="button" data-rsvp="Last sunset of 2026 ride">RSVP</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROUTES -->
+  <section class="section dark-2" id="routes">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <p class="kicker">Ride routes</p>
+          <h2>Where to take it this weekend</h2>
+        </div>
+        <p class="muted" data-route-blurb style="max-width:46ch"></p>
+      </div>
+      <div class="routes" id="routes-tool">
+        <div class="route-list" role="group" aria-label="Choose a route"></div>
+        <div class="route-map"></div>
+      </div>
+      <p class="small muted" style="margin-top:12px">Distances and times are approximate, one way from the Langata showroom. Check conditions before you ride.</p>
+    </div>
+  </section>
+
+  <!-- RIDER WALL -->
+  <section class="section" id="wall">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <p class="kicker">#RideYourPride</p>
+          <h2>The rider wall</h2>
+        </div>
+        <p class="muted" style="max-width:40ch">Post your bike with #RideYourPride or send us a photo. Every month our favourite wins a gear voucher.</p>
+      </div>
+      <div class="wall" id="wall-grid">
+        <figure><img srcset="/img/65df6f93b6f0838294fbaec1-480.webp 480w, /img/65df6f93b6f0838294fbaec1-960.webp 960w, /img/65df6f93b6f0838294fbaec1-1600.webp 1600w" sizes="(max-width: 860px) 92vw, 50vw" decoding="async" src="/img/65df6f93b6f0838294fbaec1-960.webp" alt="Rider photo of a Tekken" loading="lazy"><figcaption><strong>Tekken 250</strong>Your photo here</figcaption></figure>
+        <figure><div class="tile-text"><p>Bought your bike here? Get it on the wall.</p><a class="btn btn-light btn-sm" href="#submit">Send your photo</a></div></figure>
+        <figure><img srcset="/img/65df70acdcc9fbb964305cfd-480.webp 480w, /img/65df70acdcc9fbb964305cfd-960.webp 960w, /img/65df70acdcc9fbb964305cfd-1600.webp 1600w" sizes="(max-width: 860px) 92vw, 50vw" decoding="async" src="/img/65df70acdcc9fbb964305cfd-960.webp" alt="Rider photo of a Voge DS900X" loading="lazy"><figcaption><strong>Voge DS900X</strong>Your photo here</figcaption></figure>
+        <figure><img srcset="/img/67bb952e0f0b267c2b059cc9-480.webp 480w, /img/67bb952e0f0b267c2b059cc9-960.webp 960w, /img/67bb952e0f0b267c2b059cc9-1600.webp 1600w" sizes="(max-width: 860px) 92vw, 50vw" decoding="async" src="/img/67bb952e0f0b267c2b059cc9-960.webp" alt="Rider photo of a Zonsen Batllo" loading="lazy"><figcaption><strong>Zonsen Batllo 250R</strong>Your photo here</figcaption></figure>
+        <figure><img srcset="/img/65da2e3fde43c993cb1cbd12-480.webp 480w, /img/65da2e3fde43c993cb1cbd12-960.webp 960w, /img/65da2e3fde43c993cb1cbd12-1600.webp 1600w" sizes="(max-width: 860px) 92vw, 50vw" decoding="async" src="/img/65da2e3fde43c993cb1cbd12-960.webp" alt="Rider photo of a Tekken 250X" loading="lazy"><figcaption><strong>Tekken 250X ADV</strong>Your photo here</figcaption></figure>
+        <figure><img srcset="/img/67bcca7cc3fb2c81c0955b71-480.webp 480w, /img/67bcca7cc3fb2c81c0955b71-960.webp 960w, /img/67bcca7cc3fb2c81c0955b71-1600.webp 1600w" sizes="(max-width: 860px) 92vw, 50vw" decoding="async" src="/img/67bcca7cc3fb2c81c0955b71-960.webp" alt="Rider photo" loading="lazy"><figcaption><strong>Showroom day</strong>Your photo here</figcaption></figure>
+        <figure><img srcset="/img/67c757644c68ff7d5e0d2b42-480.webp 480w, /img/67c757644c68ff7d5e0d2b42-960.webp 960w, /img/67c757644c68ff7d5e0d2b42-1600.webp 1600w" sizes="(max-width: 860px) 92vw, 50vw" decoding="async" src="/img/67c757644c68ff7d5e0d2b42-960.webp" alt="Rider photo" loading="lazy"><figcaption><strong>Zonsen Batllo 250R</strong>Your photo here</figcaption></figure>
+        <figure><img srcset="/img/65df70ac9e0a75379483f011-480.webp 480w, /img/65df70ac9e0a75379483f011-960.webp 960w, /img/65df70ac9e0a75379483f011-1600.webp 1600w" sizes="(max-width: 860px) 92vw, 50vw" decoding="async" src="/img/65df70ac9e0a75379483f011-960.webp" alt="Rider photo" loading="lazy"><figcaption><strong>Voge DS900X</strong>Your photo here</figcaption></figure>
+      </div>
+
+      <form class="form-card" id="submit" style="margin-top:32px" novalidate>
+        <h3>Add your ride to the wall</h3>
+        <div class="form-grid">
+          <div class="field"><label for="w-name">Your name or handle</label><input id="w-name" type="text"></div>
+          <div class="field"><label for="w-bike">Your bike</label><input id="w-bike" type="text" placeholder="e.g. Voge 300GY Rally"></div>
+          <div class="field full"><label for="w-photo">Photo</label><input id="w-photo" type="file" accept="image/*" style="min-height:auto;padding:12px;border:1.5px dashed var(--rule);border-radius:var(--r-sm);width:100%;background:var(--paper)"></div>
+          <div class="full">
+            <button class="btn btn-red" type="submit">Submit for the wall</button>
+            <div class="form-success" role="status"></div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- STORIES -->
+  <section class="section white">
+    <div class="wrap">
+      <div class="section-head"><h2>Rider stories & guides</h2></div>
+      <div class="stories">
+        <a class="story" href="#">
+          <img srcset="/img/65df6f93fc239a93f6a8a716-480.webp 480w, /img/65df6f93fc239a93f6a8a716-960.webp 960w, /img/65df6f93fc239a93f6a8a716-1600.webp 1600w" sizes="(max-width: 860px) 92vw, 50vw" decoding="async" src="/img/65df6f93fc239a93f6a8a716-960.webp" alt="" loading="lazy">
+          <div class="body"><span class="tag">Series</span><h3>An art director buys a Tekken: part one</h3><p class="muted">From the first test ride to riding home on a 250 Evo.</p></div>
+        </a>
+        <a class="story" href="#">
+          <img srcset="/img/67d882de1031c9fdc79bfcc0-480.webp 480w, /img/67d882de1031c9fdc79bfcc0-960.webp 960w, /img/67d882de1031c9fdc79bfcc0-1600.webp 1600w" sizes="(max-width: 860px) 92vw, 50vw" decoding="async" src="/img/67d882de1031c9fdc79bfcc0-960.webp" alt="" loading="lazy">
+          <div class="body"><span class="tag">Guide</span><h3>Your first 1,000 km: what to check</h3><p class="muted">Running in a new bike, and what happens at the first service.</p></div>
+        </a>
+        <a class="story" href="#">
+          <img srcset="/img/67bb947f0f0b26340a059bd8-480.webp 480w, /img/67bb947f0f0b26340a059bd8-960.webp 960w, /img/67bb947f0f0b26340a059bd8-1600.webp 1600w" sizes="(max-width: 860px) 92vw, 50vw" decoding="async" src="/img/67bb947f0f0b26340a059bd8-960.webp" alt="" loading="lazy">
+          <div class="body"><span class="tag">Buyer's guide</span><h3>Best first big bike in Kenya under KES 400,000</h3><p class="muted">Seat heights, running costs and which one suits your commute.</p></div>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+</body>
+</html>

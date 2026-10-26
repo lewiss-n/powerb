@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Motorcycles for sale in Nairobi: Voge, Taro, Tekken, Zonsen | Nairobi Powerbikes</title>
+  <meta name="description" content="Browse every motorcycle in stock at Nairobi Powerbikes. Filter by riding style, brand and beginner-friendly models. Prices, specs and monthly payments.">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="catalog.js" defer></script>
+  <script src="site.js" defer></script>
+</head>
+<body data-page="bikes">
+<main>
+  <section class="page-hero road">
+    <div class="wrap">
+      <div class="crumbs"><a href="index.html">Home</a> / Bikes</div>
+      <h1>Every bike on the floor</h1>
+      <p class="lead">Fourteen models from four brands, all in Langata, with prices. Filter by how you ride, then book a test ride on the one you like.</p>
+    </div>
+  </section>
+
+  <section class="section-tight">
+    <div class="wrap">
+      <div class="filters" role="group" aria-label="Filter bikes">
+        <div class="filter-group">
+          <button class="pill" type="button" data-filter-style="all">All styles</button>
+          <button class="pill" type="button" data-filter-style="city">City & commute</button>
+          <button class="pill" type="button" data-filter-style="sport">Sport</button>
+          <button class="pill" type="button" data-filter-style="adventure">Adventure</button>
+        </div>
+        <span class="divider" aria-hidden="true"></span>
+        <div class="filter-group">
+          <button class="pill" type="button" data-filter-brand="all">All brands</button>
+          <button class="pill" type="button" data-filter-brand="Voge">Voge</button>
+          <button class="pill" type="button" data-filter-brand="Taro">Taro</button>
+          <button class="pill" type="button" data-filter-brand="Tekken">Tekken</button>
+          <button class="pill" type="button" data-filter-brand="Zonsen">Zonsen</button>
+        </div>
+      </div>
+      <div class="filters">
+        <label class="toggle-label"><input type="checkbox" id="f-beginner"> Beginner friendly only</label>
+        <span class="divider" aria-hidden="true"></span>
+        <label class="toggle-label" for="f-sort">Sort
+          <select id="f-sort" class="pill" style="padding:8px 12px">
+            <option value="featured">Featured first</option>
+            <option value="cc-asc">Engine size, small to big</option>
+            <option value="cc-desc">Engine size, big to small</option>
+            <option value="seat-asc">Lowest seat first</option>
+          </select>
+        </label>
+        <span class="result-count" id="result-count" aria-live="polite"></span>
+      </div>
+
+      <div class="bike-grid" id="bike-grid"></div>
+    </div>
+  </section>
+
+  <section class="section-tight" id="coming-soon">
+    <div class="wrap">
+      <div class="split" style="background:var(--ink);color:var(--white);border-radius:var(--r-lg);padding:clamp(24px,4vw,48px)">
+        <div>
+          <p class="kicker">Coming soon</p>
+          <h2>Cyclone RX401</h2>
+          <p class="muted">The Cyclone range is on its way to Langata. Get a WhatsApp message the day it lands, with launch pricing.</p>
+          <button class="btn btn-red" type="button" data-notify="Cyclone RX401">Notify me when it lands</button>
+        </div>
+        <div class="media" style="background:linear-gradient(180deg,#ececea,#d9dad6);border-radius:var(--r-lg)"><img srcset="/img/65ab9d2528a68baee0c79032-480.webp 480w, /img/65ab9d2528a68baee0c79032-960.webp 960w, /img/65ab9d2528a68baee0c79032-1600.webp 1600w" sizes="(max-width: 860px) 92vw, 50vw" loading="lazy" decoding="async" src="/img/65ab9d2528a68baee0c79032-960.webp" alt="Cyclone RX401" style="object-fit:contain;aspect-ratio:4/3;background:none"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="wrap">
+      <h2>Can't decide? Ride two back to back.</h2>
+      <a class="btn btn-light" href="book.html">Book a test ride</a>
+    </div>
+  </section>
+</main>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Book a test ride or service | Nairobi Powerbikes</title>
+  <meta name="description" content="Pick a bike, a day and a time slot. Book a motorcycle test ride or service at Nairobi Powerbikes in Langata.">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="catalog.js" defer></script>
+  <script src="site.js" defer></script>
+</head>
+<body data-page="">
+<main>
+  <section class="page-hero road">
+    <div class="wrap">
+      <div class="crumbs"><a href="index.html">Home</a> / Book</div>
+      <h1 id="booking-title">Book a test ride</h1>
+      <p class="lead">Pick the bike, the day and a time. We'll confirm on WhatsApp and have it ready when you arrive.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap grid-2 book-grid">
+      <div>
+        <div class="tabs" role="tablist" aria-label="Booking type">
+          <button role="tab" type="button" data-book-tab="test" aria-selected="true">Test ride</button>
+          <button role="tab" type="button" data-book-tab="service" aria-selected="false">Service</button>
+        </div>
+        <form class="form-card" id="booking-form" novalidate>
+          <div class="form-grid">
+            <div class="field full">
+              <label for="b-bike" id="b-bike-label">Which bike do you want to ride?</label>
+              <select id="b-bike"></select>
+            </div>
+            <div class="field full" data-only="service" hidden>
+              <label for="b-svc">What do you need?</label>
+              <select id="b-svc">
+                <option>Routine service</option>
+                <option>First service (1,000 km)</option>
+                <option>Diagnostics</option>
+                <option>Repair</option>
+                <option>Warranty claim</option>
+                <option>Accessory fitting</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="b-date">Day</label>
+              <input id="b-date" type="date">
+            </div>
+            <div class="field" data-only="test">
+              <label for="b-licence">Riding licence</label>
+              <select id="b-licence"><option>I have a full licence</option><option>I'm a learner</option></select>
+              <p class="hint">Learners get a supervised ride on our practice area.</p>
+            </div>
+            <div class="field" data-only="service" hidden>
+              <label for="b-km">Current mileage (km)</label>
+              <input id="b-km" type="number" inputmode="numeric" placeholder="e.g. 9,800">
+            </div>
+            <div class="field full">
+              <span class="label">Time</span>
+              <div class="slots" id="slots"></div>
+            </div>
+            <div class="field">
+              <label for="b-name">Your name</label>
+              <input id="b-name" type="text" autocomplete="name">
+            </div>
+            <div class="field">
+              <label for="b-phone">Phone (WhatsApp)</label>
+              <input id="b-phone" type="tel" autocomplete="tel" placeholder="07XX XXX XXX">
+            </div>
+            <div class="field full" data-only="service" hidden>
+              <label for="b-notes">Anything we should know?</label>
+              <textarea id="b-notes" placeholder="Noises, warning lights, parts you want checked"></textarea>
+            </div>
+            <div class="full">
+              <button class="btn btn-red" id="booking-submit" type="submit" style="width:100%">Book test ride</button>
+              <div class="form-success" role="status" aria-live="polite"></div>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <aside class="stack">
+        <div class="form-card" data-only="test">
+          <h3>What to bring</h3>
+          <ul style="padding-left:1.1em;margin:0">
+            <li>Your riding licence and ID</li>
+            <li>Closed shoes and long trousers</li>
+            <li>Your own helmet if you have one. We have loaners.</li>
+          </ul>
+        </div>
+        <div class="form-card" data-only="service" hidden>
+          <h3>Our service promise</h3>
+          <ul style="padding-left:1.1em;margin:0">
+            <li>Booked bikes go on the lift at the booked time</li>
+            <li>A quote on WhatsApp before any extra work</li>
+            <li>A message the moment it's ready</li>
+          </ul>
+        </div>
+        <div class="form-card">
+          <h3>Rather talk?</h3>
+          <p class="muted">Call or WhatsApp the showroom.</p>
+          <div class="btn-row">
+            <a class="btn btn-dark btn-sm" href="tel:+254713475447">Call 0713 475 447</a>
+            <a class="btn btn-ghost btn-sm" data-wa="Hi, I'd like to book a visit." href="#">WhatsApp</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+</main>
+</body>
+</html>

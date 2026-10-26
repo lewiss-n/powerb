@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Motorcycle financing in Kenya: monthly payment calculator | Nairobi Powerbikes</title>
+  <meta name="description" content="See what your motorcycle costs a month. Pick a bike, set your deposit and term, and apply for financing with Nairobi Powerbikes.">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="catalog.js" defer></script>
+  <script src="site.js" defer></script>
+</head>
+<body data-page="financing">
+<main>
+  <section class="page-hero road">
+    <div class="wrap">
+      <div class="crumbs"><a href="index.html">Home</a> / Financing</div>
+      <h1>Ride now, pay monthly</h1>
+      <p class="lead">Pick a bike, slide your deposit and see the monthly payment straight away. Apply in one message.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="calc">
+        <div class="calc-inputs">
+          <div class="field">
+            <label for="fc-bike">Which bike?</label>
+            <select id="fc-bike" data-calc-bike></select>
+          </div>
+          <div class="field">
+            <label for="fc-price">Bike price (KES)</label>
+            <input id="fc-price" type="number" inputmode="numeric" data-calc-price placeholder="Enter the price we quoted you">
+            <p class="hint">Prices for every model are on its page. Don't see one yet? Ask on WhatsApp and type it in here.</p>
+          </div>
+          <div class="field">
+            <span class="label">Deposit</span>
+            <div class="range-row"><input type="range" min="20" max="70" step="5" value="30" data-calc-deposit aria-label="Deposit percentage"><output data-calc-deposit-out></output></div>
+          </div>
+          <div class="field"><span class="label">Repay over</span><div class="seg" data-calc-terms></div></div>
+        </div>
+        <div class="calc-output">
+          <span class="muted">Estimated monthly payment</span>
+          <div class="monthly" data-out-monthly></div>
+          <div class="row"><span>Deposit today</span><strong data-out-deposit></strong></div>
+          <div class="row"><span>Amount financed</span><strong data-out-loan></strong></div>
+          <div class="row"><span>Term</span><strong data-out-term></strong></div>
+          <div class="row"><span>Total you pay</span><strong data-out-total></strong></div>
+          <a class="btn btn-red" data-calc-apply href="#">Apply for financing</a>
+          <p class="note">Illustrative only. Final rates and approval come from our financing partner.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section white">
+    <div class="wrap">
+      <div class="section-head"><h2>How it works</h2></div>
+      <div class="steps">
+        <div class="step"><h3>Pick your bike</h3><p class="muted">Use the calculator or the quiz. Test ride it if you haven't.</p></div>
+        <div class="step"><h3>Send your details</h3><p class="muted">Apply on WhatsApp. We'll tell you exactly which documents to bring.</p></div>
+        <div class="step"><h3>Get approved</h3><p class="muted">Our financing partner confirms your deposit and monthly amount.</p></div>
+        <div class="step"><h3>Ride it home</h3><p class="muted">Pay the deposit, sign, and collect your bike with your gear fitted.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap grid-2">
+      <div>
+        <h2>What you'll usually need</h2>
+        <p class="muted">The exact list depends on the financing partner.</p>
+        <p><span class="placeholder">Nairobi Powerbikes to confirm their partner's requirements</span></p>
+      </div>
+      <ul class="stack" style="padding-left:1.1em;margin:0;font-size:1.1rem">
+        <li>National ID or passport</li>
+        <li>KRA PIN certificate</li>
+        <li>Recent payslips or bank / M-Pesa statements</li>
+        <li>A valid motorcycle riding licence, or proof you're getting one</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="wrap">
+      <h2>Questions about financing?</h2>
+      <a class="btn btn-light" data-wa="Hi, I have a question about motorcycle financing." href="#">Ask on WhatsApp</a>
+    </div>
+  </section>
+</main>
+</body>
+</html>

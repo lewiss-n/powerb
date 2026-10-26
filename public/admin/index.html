@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Admin | Nairobi Powerbikes</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/admin/admin.css">
+  <script src="/admin/admin.js" defer></script>
+</head>
+<body>
+
+<!-- Login -->
+<div class="login hidden" id="login">
+  <form id="login-form">
+    <img src="/img/logo-480.webp" alt="Nairobi Powerbikes">
+    <h1>Admin sign in</h1>
+    <label for="pw" class="muted">Password</label>
+    <input class="inp" id="pw" type="password" autocomplete="current-password" required>
+    <p class="err" id="login-err" role="alert"></p>
+    <button class="btn btn-red" type="submit" style="justify-content:center">Sign in</button>
+  </form>
+</div>
+
+<!-- App -->
+<div class="app hidden" id="app">
+  <aside class="side" aria-label="Admin navigation">
+    <a class="logo" href="/" target="_blank" rel="noopener">
+      <img src="/img/logo-480.webp" alt="">
+    </a>
+    <button class="nav-btn" data-view="overview"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/></svg>Overview</button>
+    <button class="nav-btn" data-view="traffic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="m7 15 4-4 3 3 6-7"/></svg>Traffic</button>
+    <button class="nav-btn" data-view="bookings"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Bookings<span class="count hidden" id="c-bookings"></span></button>
+    <button class="nav-btn" data-view="orders"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18M16 10a4 4 0 0 1-8 0"/></svg>Orders<span class="count hidden" id="c-orders"></span></button>
+    <button class="nav-btn" data-view="leads"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></svg>Leads<span class="count hidden" id="c-leads"></span></button>
+    <button class="nav-btn" data-view="wall"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-5-5L5 21"/></svg>Rider wall<span class="count hidden" id="c-wall"></span></button>
+    <button class="nav-btn" data-view="catalog"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L2 12V2h10l8.6 8.6a2 2 0 0 1 0 2.8Z"/><circle cx="7" cy="7" r="1.5"/></svg>Prices & stock</button>
+    <div class="foot">
+      <a class="btn" href="/" target="_blank" rel="noopener">View website</a>
+      <button class="btn" id="logout" type="button">Sign out</button>
+    </div>
+  </aside>
+
+  <div class="main">
+    <header class="topbar">
+      <h1 id="view-title">Overview</h1>
+      <span class="spacer"></span>
+      <span class="live-pill" id="live-pill" title="Visitors active in the last 5 minutes">0 on site now</span>
+      <div class="seg" role="group" aria-label="Date range" id="range">
+        <button type="button" data-days="7">7 days</button>
+        <button type="button" data-days="30" aria-pressed="true">30 days</button>
+        <button type="button" data-days="90">90 days</button>
+      </div>
+    </header>
+    <div class="content" id="content" aria-live="polite"></div>
+  </div>
+</div>
+
+<div class="tip" id="tip" role="tooltip"></div>
+<div class="toast" id="toast" role="status"></div>
+</body>
+</html>
