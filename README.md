@@ -65,18 +65,18 @@ Visitor locations work automatically on Vercel: it tells the server each visitor
 
 ```bash
 cp .env.example .env        # then set ADMIN_PASSWORD and SESSION_SECRET
-docker compose up -d --build
+docker compose -f docker/docker-compose.yml up -d --build
 ```
 
 - Website: http://localhost:3000
 - Admin: http://localhost:3000/admin
 
-The database and uploaded photos live in the `powerbikes-data` Docker volume, so they survive restarts and rebuilds.
+The Docker files live in `docker/` so Vercel doesn't mistake the project for a container. The database and uploaded photos live in the `powerbikes-data` Docker volume, so they survive restarts and rebuilds.
 
 ```bash
-docker compose logs -f            # watch the server
-docker compose down               # stop (data is kept)
-docker compose down -v            # stop AND delete all data
+docker compose -f docker/docker-compose.yml logs -f    # watch the server
+docker compose -f docker/docker-compose.yml down       # stop (data is kept)
+docker compose -f docker/docker-compose.yml down -v    # stop AND delete all data
 ```
 
 Back up the database: `docker cp nairobi-powerbikes:/data/powerbikes.db ./backup.db`
@@ -147,6 +147,7 @@ server/db.js        Database connection (local file, Vercel /tmp, or Turso) and 
 server/seed.js      Catalogue and demo data
 public/             The website and admin panel (served by Vercel's CDN)
 vercel.json         Vercel routing and caching
+docker/             Dockerfile and docker-compose.yml (Docker only; ignored by Vercel)
 ```
 
 ## Not connected yet

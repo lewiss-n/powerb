@@ -1,18 +1,21 @@
+# Run from the project folder:  docker compose -f docker/docker-compose.yml up -d --build
 services:
   web:
-    build: .
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
     image: nairobi-powerbikes:latest
     container_name: nairobi-powerbikes
     restart: unless-stopped
     ports:
       - "${PORT:-3000}:3000"
     env_file:
-      - path: .env
+      - path: ../.env
         required: false   # copy .env.example to .env to set your admin password
     environment:
       DATA_DIR: /data
     volumes:
-      - powerbikes-data:/data   # SQLite database + uploaded rider photos live here
+      - powerbikes-data:/data   # SQLite database lives here
 
 volumes:
   powerbikes-data:

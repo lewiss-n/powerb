@@ -1,3 +1,4 @@
+# Built from the project folder (context ..). See docker/docker-compose.yml.
 # ---- build: install production dependencies (better-sqlite3 has prebuilt binaries for this base) ----
 FROM node:22-bookworm-slim AS deps
 WORKDIR /app

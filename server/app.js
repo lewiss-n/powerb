@@ -31,6 +31,16 @@ const ready = (async () => {
 const app = express();
 app.set("trust proxy", true);
 app.disable("x-powered-by");
+// On Vercel, rewrites may hand the app the rewritten path (/api?__url=...). Restore the original URL.
+app.use((req, res, next) => {
+  if (req.url.includes("__url=")) {
+    const u = new URL(req.url, "http://local");
+    const original = u.searchParams.get("__url");
+    u.searchParams.delete("__url");
+    if (original && original.startsWith("/")) req.url = original + (u.search || "");
+  }
+  next();
+});
 app.use(async (req, res, next) => { try { await ready; next(); } catch (e) { next(e); } });
 app.use(express.json({ limit: "100kb" }));
 app.use((req, res, next) => {
